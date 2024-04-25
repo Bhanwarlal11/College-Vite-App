@@ -10,6 +10,32 @@ import white_arrwo from '../../assets/white-arrow.png'
 
 
 const Contact = () => {
+
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "8fb02a26-423f-4d03-a8b2-f2618ad04ee5");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <div className="contact">
       <div className="contact-col">
@@ -27,7 +53,7 @@ const Contact = () => {
         </ul>
       </div>
       <div className="contact-col">
-        <form>
+        <form onSubmit={onSubmit}>
             <label>Your Name</label>
             <input type="text" name="name" placeholder="Enter your name" required/>
             <label>Phone Number</label>
@@ -38,6 +64,7 @@ const Contact = () => {
             <textarea name="message" rows="6" placeholder="Enter your message"></textarea>
             <button type="submit" className="btn dark-btn">Submit now <img src={white_arrwo} alt="" /></button>
         </form>
+        <span>{result}</span>
       </div>
     </div>
   );

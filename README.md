@@ -82,3 +82,45 @@ left: 0;
 
 **Transform:translate()**
 - read about transform & translate CSS Property
+
+**web3forms**
+
+**What is event.preventDefault()**
+- 
+
+**how to add scroot features in <Header/>**
+- so we use React Scoll (npm)
+```
+<Link activeClass="active"
+      to="target"
+      spy={true}
+      smooth={true}
+      hashSpy={true}
+      offset={50}
+      duration={500}
+      delay={1000}
+      isDynamic={true}
+      onSetActive={this.handleSetActive}
+      onSetInactive={this.handleSetInactive}
+      ignoreCancelEvents={false}
+      spyThrottle={500}
+>
+  Your name
+</Link>
+```
+- if you use any" link to='footer'" then you need to specify{name='footer' OR|||| id='footer'}
+- if you give unique classname of each container , then you dont need to specify 'id or name'
+
+
+**how to complete view while clicked to link tag**
+- so , you adjust offset in link tag
+
+**you can use{ order:2} for adjust element in css while using media queries*
+
+**Now we have completed our university project**
+**upload this website**
+- first, create dist folder 
+- using - `npm run build`
+- dist folder contains - index.html & assets folder
+- you need to upload only `Dist folder`
+
