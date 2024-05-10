@@ -124,4 +124,5 @@ left: 0;
 - dist folder contains - index.html & assets folder
 - you need to upload only `Dist folder`
 
-`https://bhanwarlal11.github.io/College-Vite-App/`
+
+## [https://bhanwarlal11.github.io/College-Vite-App/](https://bhanwarlal11.github.io/College-Vite-App/)
